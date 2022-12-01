@@ -18,7 +18,7 @@ class Upcoming extends ResourceController
         $response = [
         'status' => 200,
         'error' => "false",
-        'message' => '',
+        'message' => 'Data retreived',
         'totaldata' => count($data),
         'data' => $data,
         ];
@@ -87,7 +87,7 @@ class Upcoming extends ResourceController
         $valid = $this->validate([
         'id' => [
         'rules' => 'is_unique[upcoming.id]',
-        'label' => 'AIDI',
+        'label' => 'id',
         'errors' => [
             'is_unique' => "{field} sudah ada"
             ]
